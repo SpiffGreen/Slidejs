@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Page for slideshow testing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .slide-cont {
+            width: 100%;
+            height: 200px;
+            /* background: lightblue; */
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="text-align: center; font-size: 23px; margin: 15px;">
+        <h2>SlideShow.js</h2>
+        <p>A small javascript library for making slideshow effects.</p>
+    </div>
+    
+    <p style="text-align: center; margin-top: 15px;">Vertical Slide</p>
+    <div class="slide-y">
+        <div class="slide-a">
+            <div class="slide bg1" style="background-color: rgb(44, 103, 158);">hello Spiff</div>
+            <div class="slide bg2" style="background-color: rgb(150, 29, 79);">Age: 40</div>
+            <div class="slide bg3" style="background-color: rgb(175, 141, 28);">Bonny boy</div>
+            <div class="slide bg4" style="background-color: rgb(12, 23, 39);">Life's Good</div>
+        </div>
+    </div>
+    <br>
+
+    <p style="text-align: center; margin-top: 15px;">Horizontal Slide</p>
+    <div class="slide-x">
+        <div class="slide-b">
+            <div class="slide bg1" style="background-color: rgb(44, 103, 158);">hello Spiff</div>
+            <div class="slide bg2" style="background-color: rgb(150, 29, 79);">Age: 40</div>
+            <div class="slide bg3" style="background-color: rgb(175, 141, 28);">Bonny boy</div>
+            <div class="slide bg4" style="background-color: rgb(12, 23, 39);">Life's Good</div>
+        </div>
+    </div>
+    <br>
+    
+    <script src="slideshow.js"></script>
+    <script>
+        var slider1 = {
+            container: "slide-y",
+            box: "slide-a",
+            duration: 2000,
+            axis: "y"
+        };
+
+        SlideShow(slider1);
+
+        var slider2 = {
+            container: "slide-x",
+            box: "slide-b",
+            duration: 2000,
+            axis: "x"
+        };
+
+        SlideShow(slider2)
+    </script>
+</body>
+</html>
